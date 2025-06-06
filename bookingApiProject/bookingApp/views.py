@@ -73,12 +73,13 @@ class BookingByEmailAPI(APIView):
     
     def get(self, request):
         email = request.query_params.get('email')
-        
+
+        ## If we have not provided any email in the query
         if not email:
             return Response({"error": "Email query parameter is required."}, status=status.HTTP_400_BAD_REQUEST)
-        
+
+        ## If the email provided as part of query does not even exist in the BookSlot database
         if not(BookingSlot.objects.filter(client_email=email).exists()):
-            
             return Response({"error": "No Bookings By This Email"}, status=status.HTTP_400_BAD_REQUEST)
         
         bookings = BookingSlot.objects.filter(client_email=email)
