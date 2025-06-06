@@ -21,7 +21,7 @@ Database: SQLite (default, can be changed to PostgreSQL)
 
 Admin Panel: Used for adding fitness class sessions securely
 
-##Models
+## Models
 
 __FitnessClassSession__
 
