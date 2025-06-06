@@ -23,7 +23,8 @@ Admin Panel: Used for adding fitness class sessions securely
 
 ##Models
 
-FitnessClassSession 
+__FitnessClassSession__
+
   class_name: Class type (Yoga, Zumba, HIIT)
   
   session_datetime: Date & Time of session (unique with class name)
@@ -32,7 +33,8 @@ FitnessClassSession
   
   total_slots: Number of slots available for booking
 
-BookingSlot
+__BookingSlot__
+
   session: Foreign key to FitnessClassSession
   
   client_name: Name of the client
